@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140414231937) do
+ActiveRecord::Schema.define(version: 20140414232142) do
 
   create_table "datasets", force: true do |t|
     t.string   "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "descriptions", force: true do |t|
+    t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

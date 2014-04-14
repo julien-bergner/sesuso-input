@@ -1,4 +1,6 @@
 SesusoInput::Application.routes.draw do
+  resources :descriptions
+
   resources :entries
 
   resources :datasets
