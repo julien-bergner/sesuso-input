@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dataset:</strong>
+  <%= @entry.dataset_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @entry.description_id %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @entry.value_id %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @entry.caption %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @entry.color %>
+</p>
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

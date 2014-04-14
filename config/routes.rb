@@ -1,4 +1,6 @@
 SesusoInput::Application.routes.draw do
+  resources :entries
+
   resources :datasets
 
   root :to => "home#index"
