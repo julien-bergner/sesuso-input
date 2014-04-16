@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140414232142) do
+ActiveRecord::Schema.define(version: 20140416204947) do
+
+  create_table "abstract_values", force: true do |t|
+    t.integer  "entry_id"
+    t.string   "type"
+    t.string   "string_value"
+    t.integer  "integer_value"
+    t.float    "float_value"
+    t.boolean  "boolean_value"
+    t.text     "text_value"
+    t.date     "date_value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "datasets", force: true do |t|
     t.string   "caption"
