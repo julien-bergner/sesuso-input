@@ -2,6 +2,7 @@ class CreateAbstractValues < ActiveRecord::Migration
   def change
     create_table :abstract_values do |t|
       t.integer :entry_id
+      t.integer :description_id
       t.string :type
       t.string :string_value
       t.integer :integer_value

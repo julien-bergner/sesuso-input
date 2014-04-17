@@ -1,3 +1,3 @@
-class BooleanValue
-  # To change this template use File | Settings | File Templates.
+class BooleanValue < AbstractValue 
+
 end

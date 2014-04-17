@@ -1,3 +1,3 @@
-class FloatValue
-  # To change this template use File | Settings | File Templates.
+class FloatValue < AbstractValue
+
 end

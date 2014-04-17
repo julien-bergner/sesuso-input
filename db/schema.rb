@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20140416204947) do
 
   create_table "abstract_values", force: true do |t|
     t.integer  "entry_id"
+    t.integer  "description_id"
     t.string   "type"
     t.string   "string_value"
     t.integer  "integer_value"
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140416204947) do
   end
 
   create_table "descriptions", force: true do |t|
+    t.integer  "entry_id"
     t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -40,8 +42,6 @@ ActiveRecord::Schema.define(version: 20140416204947) do
 
   create_table "entries", force: true do |t|
     t.integer  "dataset_id"
-    t.integer  "description_id"
-    t.integer  "value_id"
     t.string   "caption"
     t.string   "color"
     t.datetime "created_at"

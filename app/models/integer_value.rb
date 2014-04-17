@@ -1,3 +1,3 @@
-class IntegerValue
-  # To change this template use File | Settings | File Templates.
+class IntegerValue < AbstractValue
+
 end

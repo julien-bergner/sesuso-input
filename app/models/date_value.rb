@@ -1,3 +1,3 @@
-class DateValue
-  # To change this template use File | Settings | File Templates.
+class DateValue < AbstractValue
+ 
 end

@@ -1,3 +1,3 @@
-class StringValue
-  # To change this template use File | Settings | File Templates.
+class StringValue < AbstractValue
+  
 end
