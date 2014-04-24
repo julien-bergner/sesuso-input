@@ -27,16 +27,16 @@ ActiveRecord::Schema.define(version: 20140424155440) do
     t.datetime "updated_at"
   end
 
-  create_table "data_sheets", force: true do |t|
-    t.string  "caption"
-    t.integer "user_id"
-  end
-
   create_table "datasets", force: true do |t|
     t.integer  "datasheet_id"
     t.string   "caption"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "datasheets", force: true do |t|
+    t.string  "caption"
+    t.integer "user_id"
   end
 
   create_table "descriptions", force: true do |t|
