@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416204947) do
+ActiveRecord::Schema.define(version: 20140424155440) do
 
   create_table "abstract_values", force: true do |t|
-    t.integer  "entry_id"
+    t.integer  "datasheet_id"
     t.integer  "description_id"
     t.string   "type"
     t.string   "string_value"
@@ -27,14 +27,20 @@ ActiveRecord::Schema.define(version: 20140416204947) do
     t.datetime "updated_at"
   end
 
+  create_table "data_sheets", force: true do |t|
+    t.string  "caption"
+    t.integer "user_id"
+  end
+
   create_table "datasets", force: true do |t|
+    t.integer  "datasheet_id"
     t.string   "caption"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "descriptions", force: true do |t|
-    t.integer  "entry_id"
+    t.integer  "datasheet_id"
     t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -42,6 +48,8 @@ ActiveRecord::Schema.define(version: 20140416204947) do
 
   create_table "entries", force: true do |t|
     t.integer  "dataset_id"
+    t.integer  "description_id"
+    t.integer  "entry_id"
     t.string   "caption"
     t.string   "color"
     t.datetime "created_at"
