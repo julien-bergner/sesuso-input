@@ -15,6 +15,7 @@ class DatasetsController < ApplicationController
   # GET /datasets/new
   def new
     @dataset = Dataset.new
+    @descriptions = Description.all.map(&:text)
   end
 
   # GET /datasets/1/edit

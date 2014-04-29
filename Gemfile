@@ -14,7 +14,9 @@ gem 'devise'
 gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
-#gem 'twitter-typeahead-rails'
+
+gem 'bootstrap_form'
+
 
 group :development do
   gem 'better_errors'

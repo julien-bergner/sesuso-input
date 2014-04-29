@@ -1,5 +1,7 @@
 class Entry < ActiveRecord::Base
   belongs_to :dataset
-  has_one :description
+  belongs_to :description
   has_one :abstract_value
+
+  accepts_nested_attributes_for :abstract_value
 end
