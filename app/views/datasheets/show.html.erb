@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @datasheet.user_id %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @datasheet.caption %>
+</p>
+
+<%= link_to 'Edit', edit_datasheet_path(@datasheet) %> |
+<%= link_to 'Back', datasheets_path %>

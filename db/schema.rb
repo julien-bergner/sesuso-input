@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424155440) do
+ActiveRecord::Schema.define(version: 20140424165718) do
 
   create_table "abstract_values", force: true do |t|
     t.integer  "datasheet_id"
@@ -35,8 +35,10 @@ ActiveRecord::Schema.define(version: 20140424155440) do
   end
 
   create_table "datasheets", force: true do |t|
-    t.string  "caption"
-    t.integer "user_id"
+    t.integer  "user_id"
+    t.string   "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "descriptions", force: true do |t|
@@ -49,7 +51,7 @@ ActiveRecord::Schema.define(version: 20140424155440) do
   create_table "entries", force: true do |t|
     t.integer  "dataset_id"
     t.integer  "description_id"
-    t.integer  "entry_id"
+    t.integer  "abstract_value_id"
     t.string   "caption"
     t.string   "color"
     t.datetime "created_at"

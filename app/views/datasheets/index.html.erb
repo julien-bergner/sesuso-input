@@ -1,0 +1,29 @@
+<h1>Listing datasheets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Caption</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @datasheets.each do |datasheet| %>
+      <tr>
+        <td><%= datasheet.user_id %></td>
+        <td><%= datasheet.caption %></td>
+        <td><%= link_to 'Show', datasheet %></td>
+        <td><%= link_to 'Edit', edit_datasheet_path(datasheet) %></td>
+        <td><%= link_to 'Destroy', datasheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Datasheet', new_datasheet_path %>
